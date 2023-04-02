@@ -55,13 +55,60 @@ public class JasminRamonEmmielTester2 extends JFrame {
         volumeOfASolid.add(volumeCylinder);
         volumeOfASolid.add(volumeRectangularSolid);
 
+        areaCircle.addActionListener((e) -> {
+            try {
+                showAreaCircle();
+            }catch (Exception ac){
+                ac.printStackTrace();
+            }
+        });
+
 
         setTitle("Computations of AREAS and VOLUMES");
         setJMenuBar(menuBar);
         setVisible(true);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setLocationRelativeTo(null);
+        setResizable(false);
         pack();
+    }
+
+    private void showAreaCircle() throws Exception{
+        JFrame circleGUI = new JFrame("Area of a Circle");
+        JPanel circlePanel = new JPanel();
+
+        JLabel radiusLabel = new JLabel("Enter the radius of the circle: ");
+
+        JTextField radiusTextField = new JTextField(20);
+        JTextField circleResultField = new JTextField(60);
+        JButton circleOutputBtn = new JButton("Show area");
+
+        circleResultField.setEditable(false);
+        circlePanel.setLayout(new GridLayout(2,2));
+        circlePanel.add(radiusLabel);
+        circlePanel.add(radiusTextField);
+        circlePanel.add(circleOutputBtn);
+        circlePanel.add(circleResultField);
+
+
+        circleOutputBtn.addActionListener((e) -> {
+            if (!radiusTextField.getText().equals("")) {
+                double radius = Double.parseDouble(radiusTextField.getText());
+                Circle shape = new Circle("circle", radius);
+                if (shape instanceof Circle)
+                    circleResultField.setText("The area of " + ((Circle) shape).toString() + " is " + ((Circle) shape).area() + " square units.");
+                else
+                    circleResultField.setText("No circle has been instantiated.");
+            }
+            else
+                circleResultField.setText("You have to enter the radius of the circle.");
+        });
+
+        circleGUI.getContentPane().add(circlePanel);
+        circleGUI.pack();
+        circleGUI.setVisible(true);
+        circleGUI.setResizable(false);
+        circleGUI.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
     }
 
 
