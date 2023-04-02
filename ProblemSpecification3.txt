@@ -1,0 +1,17 @@
+Computer Programming 2
+Final Exercise 3
+
+
+Please open the pdf file called IndividualFinalProjectSpecification_GeometricMeasurements.pdf. The specification has helpful diagrams that may be seen clearly
+through the pdf file.
+
+Be reminded that you have to follow programming conventions and you have to provide documentations
+through comments (Present an algorithm through multiline comments where appropriate).
+
+For your convenience, the source codes for the needed Interface and Reference classes
+are provided in zipped project folder named  FinalExercise3. You can just unzipped and use the
+project folder such that you will not need to re-encode those that are already given.
+
+
+FOR THIS EXERCISE, JUST UPLOAD YOUR main class ( i.e. just upload <YourName>Tester2.java ).
+When I will evaluate/check/test your main class, I will be using my codes for the needed Interface and Reference classes.
