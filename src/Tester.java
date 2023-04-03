@@ -277,8 +277,6 @@ public class Tester extends JFrame{
         frameForSquare.setVisible(true);
         frameForSquare.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
     }
-
-
     private void showRectangleUI() throws Exception{
 
         frameForRectangle = new JFrame("Area of a Rectangle");
