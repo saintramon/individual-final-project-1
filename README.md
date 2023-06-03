@@ -1,4 +1,4 @@
-# CS122_9301_Team1
+# CS 122 Individual Final Project 1
 
 
 ## Description
